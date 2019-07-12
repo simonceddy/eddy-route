@@ -7,10 +7,14 @@ $r->get('/', function () {
     return new Zend\Diactoros\Response\JsonResponse('hello world');
 });
 
-$d = $r->dispatcher();
-
 $r->get('/test', function () {
     return new Zend\Diactoros\Response\JsonResponse('hello test');
 });
 
-dd($d, $r);
+$d = new mindplay\middleman\Dispatcher([$r, new Middlewares\RequestHandler()]);
+
+(new Zend\HttpHandlerRunner\Emitter\SapiEmitter())->emit($d->dispatch(
+    Zend\Diactoros\ServerRequestFactory::fromGlobals()
+));
+
+// dd($d, $r);
