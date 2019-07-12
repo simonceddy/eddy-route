@@ -11,7 +11,7 @@ It is not as feature rich as [League/Route](https://route.thephpleague.com/), bu
 Eddy/Route adds a few tweaks to FastRoute's default behaviour:
 
 - __Routes are stored in an `ArrayObject` instance instead of a plain array.__
-    The idea here is to allow creating a Dispatcher instance before routes have been added, since an `ArrayObject` is passed by reference, while a plain array is copied.
+  - The idea here is to allow creating a Dispatcher instance before routes have been added, since an `ArrayObject` is passed by reference, while a plain array is copied.
 
 - __Various convenience methods.__
-    The `Router` object provides a number of convenience methods that wrap FastRoute's own methods. These helpers are less verbose than FastRoute's method names, and may be preferred.
+  - The `Router` object provides a number of convenience methods that wrap FastRoute's own methods. These helpers are less verbose than FastRoute's method names, and may be preferred.
