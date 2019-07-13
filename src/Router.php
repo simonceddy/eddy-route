@@ -24,13 +24,14 @@ class Router extends RouteCollector implements MiddlewareInterface
 
     protected $psr15;
 
-    public function __construct(
-        RouteParser $routeParser = null,
-        DataGenerator $dataGenerator = null
-    ) {
+    public function __construct(array $options = []) {
+        if (!empty($options)) {
+            // todo handle options
+        }
+
         parent::__construct(
-            $routeParser ?? new Parser\RouteParser(),
-            $dataGenerator ?? new Data\RouteDataGenerator()
+            $options['routeParser'] ?? new Parser\RouteParser(),
+            $options['dataGenerator'] ?? new Data\RouteDataGenerator()
         );
     }
 
