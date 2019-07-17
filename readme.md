@@ -1,6 +1,6 @@
 # Eddy/Route
 
-Eddy/Route is an abstraction of [nikic/FastRoute][fastRoute].
+Eddy/Route is an implementation of [nikic/FastRoute][fastRoute] and [Middlewares/FastRoute package][fastRouteMiddleware].
 
 Similarly to [League/Route][leagueRoute], this library aims to provide a friendlier API for [FastRoute][fastRoute], as well as adding a few tweaks.
 
@@ -13,6 +13,7 @@ Eddy/Route adds a few tweaks to FastRoute's default behaviour:
 - __The default DataGenerator stores routes in an `ArrayObject` instance instead of a plain array.__
   - The idea here is to allow creating a Dispatcher instance before routes have been added, since an `ArrayObject` is passed by reference, while a plain array is copied.
   - _Note:_ __Work In Progress:__ FastRoute passes an empty array to the Dispatcher if no variable routes are set, which breaks this feature for variable routes added after the Dispatcher is created.
+  - This feature may be dropped in favour of old behaviour.
 
 - __Various convenience methods.__
   - The Router object provides a number of convenience methods that wrap FastRoute's own methods. These helpers are a little less verbose than FastRoute's method names, and may be preferred.

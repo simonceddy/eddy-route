@@ -17,8 +17,8 @@ $r->get('/testing', function () {
 
 $d = new mindplay\middleman\Dispatcher([$r, new Middlewares\RequestHandler()]);
 
-(new Zend\HttpHandlerRunner\Emitter\SapiEmitter())->emit($d->dispatch(
+/* (new Zend\HttpHandlerRunner\Emitter\SapiEmitter())->emit($d->dispatch(
     Zend\Diactoros\ServerRequestFactory::fromGlobals()
-));
+)); */
 
-// dd($d, $r);
+dd($r->getData());

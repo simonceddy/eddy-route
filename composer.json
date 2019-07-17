@@ -32,6 +32,9 @@
         "zendframework/zend-diactoros": "^2.1",
         "zendframework/zend-httphandlerrunner": "^1.1",
         "symfony/var-dumper": "^4.3",
-        "mindplay/middleman": "^3.0"
+        "mindplay/middleman": "^3.0",
+        "behat/behat": "^3.5",
+        "phpspec/phpspec": "^5.1",
+        "consolidation/robo": "^1.4"
     }
 }
